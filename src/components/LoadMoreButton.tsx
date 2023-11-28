@@ -34,8 +34,9 @@ export default function LoadMoreButton({ nextLink }: { nextLink: string }) {
 
   return (
     <Button
-      color="primary"
+      color="secondary"
       radius="sm"
+      className="text-background font-semibold"
       onClick={handleClick}
       isLoading={isLoading}
     >

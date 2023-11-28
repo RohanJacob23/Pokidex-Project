@@ -24,7 +24,7 @@ export default async function Home() {
     <main className="flex flex-col self-stretch items-center p-8 gap-8 grow">
       <div className="flex flex-col justify-center items-center self-stretch gap-16">
         {/* title */}
-        <div className="flex flex-col self-stretch gap-4 items-center">
+        <div className="flex flex-col self-stretch gap-4 items-center text-center">
           <h1 className="gradient-text text-[3.8rem] font-fugaz">Pokimon</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>

@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Card, CardBody, CardFooter, Image, Skeleton } from "@nextui-org/react";
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  Chip,
+  Image,
+  Skeleton,
+} from "@nextui-org/react";
 import axios from "axios";
 import { PokemonDetails } from "@/types/types";
 import NextImage from "next/image";
@@ -34,8 +41,8 @@ export default function PokemonCard({
         <Card
           shadow="lg"
           isPressable
-          onPress={() => router.push(`/${name}`)}
-          className="flex flex-col gap-4 bg-[#320C0E]"
+          onPress={() => router.push(`/${pokemonDetail.id}`)}
+          className="flex flex-col gap-4 bg-[#320C0E] min-w-[15rem]"
         >
           <CardBody className="p-0 overflow-hidden gradient">
             <Image
@@ -54,9 +61,22 @@ export default function PokemonCard({
               <h1 className="first-letter:uppercase font-fugaz text-lg">
                 {name}
               </h1>
-              <p>Lorem ipsum dolor sit amet</p>
+              {/* <p>Lorem ipsum dolor sit amet</p> */}
             </div>
-            <p>Pokemon Name</p>
+            <div className="flex flex-wrap gap-2">
+              {pokemonDetail.types.map(({ type }, i) => (
+                <Chip
+                  key={i}
+                  size="sm"
+                  color="secondary"
+                  classNames={{ content: "font-semibold" }}
+                  className="text-background"
+                >
+                  {type.name}
+                </Chip>
+              ))}
+            </div>
+            {/* <p>Pokemon Name</p> */}
           </CardFooter>
         </Card>
       ) : (

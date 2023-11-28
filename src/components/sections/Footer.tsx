@@ -5,8 +5,8 @@ import { Divider } from "@nextui-org/react";
 
 export default function Footer() {
   return (
-    <section className="flex flex-col items-center self-stretch p-8 md:px-16 md:py-20 gap-4 md:gap-16 bg-[#291B1C]">
-      <div className="flex flex-wrap items-center self-stretch content-center justify-center gap-8">
+    <section className="flex flex-col self-stretch items-center p-8 md:px-16 md:py-20 gap-8 md:gap-16 bg-[#291B1C]">
+      <div className="flex flex-wrap items-center content-center justify-center gap-8 text-lg max-w-[13rem] sm:max-w-none">
         <div className="flex flex-col md:flex-row gap-8">
           <h1>link 1</h1>
           <h1>link 2</h1>
@@ -21,7 +21,7 @@ export default function Footer() {
       {/* credits */}
       <div className="flex flex-col items-center gap-4 md:gap-8 self-stretch">
         <Divider />
-        <div className="flex justify-between self-stretch gap-6 md:gap-0 text-sm">
+        <div className="flex flex-col md:flex-row md:justify-between items-center self-stretch gap-6 md:gap-0 text-sm">
           <p>© 2023 Relume. All rights reserved.</p>
           {/* footer links */}
           <div className="flex gap-6 flex-wrap self-stretch content-center items-center justify-center underline">

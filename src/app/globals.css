@@ -2,26 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* @layer base{
+} */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  html,
+  body {
+    @apply min-h-screen;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .gradient {
+    background: linear-gradient(
+      143deg,
+      #f6bb3c 14.5%,
+      #fab13c 18.23%,
+      #fea73e 21.95%,
+      #ff9e42 25.67%,
+      #ff9446 29.4%,
+      #ff8a4b 33.12%,
+      #ff8051 36.84%,
+      #ff7756 40.57%,
+      #ff6e5d 44.29%,
+      #fc6563 48.01%,
+      #f75d69 51.74%,
+      #f25670 55.46%,
+      #ec4f76 59.18%,
+      #e44a7c 62.9%,
+      #dc4582 66.63%,
+      #d24288 70.35%,
+      #c8408e 74.07%,
+      #bc3f93 77.8%,
+      #b03e97 81.52%,
+      #a23f9b 85.24%
+    );
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #e94449 0%, #ef7c43 49.9%, #f6bb3c 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
